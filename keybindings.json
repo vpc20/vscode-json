@@ -172,7 +172,7 @@
         "command": "editor.action.joinLines"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+shift+alt+n",
         "command": "workbench.action.gotoSymbol"
     },
     {
@@ -352,5 +352,18 @@
     {
         "key": "ctrl+shift+k",
         "command": "git.push"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "-editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+f12",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
     }
 ]
