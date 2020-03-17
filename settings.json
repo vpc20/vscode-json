@@ -1,0 +1,13 @@
+{
+    "update.channel": "none",
+    "update.enableWindowsBackgroundUpdates": false,
+    "telemetry.enableTelemetry": false,
+    "update.showReleaseNotes": false,
+    "telemetry.enableCrashReporter": false,
+    "extensions.autoUpdate": false,
+    "C_Cpp.clang_format_style": "Google",
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "go.formatTool": "gofmt",
+    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true
+}
