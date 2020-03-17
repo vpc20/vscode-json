@@ -1,3 +1,3 @@
 # vscode-json
 
-Visual Studion Code snippets, keybindings, settings, etc.
+Visual Studio Code snippets, keybindings, settings, etc.
