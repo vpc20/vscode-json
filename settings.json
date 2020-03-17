@@ -9,5 +9,7 @@
     "window.zoomLevel": 0,
     "workbench.startupEditor": "newUntitledFile",
     "go.formatTool": "gofmt",
-    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true
+    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
 }
