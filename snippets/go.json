@@ -26,6 +26,20 @@
 		],
 		"description": "array declaration w/ initial values"
 	},
+	"map declaration": {
+		"prefix": "map",
+		"body": [
+			"var ${1:mapname} map[${2:keytype}]${3:valtype}"
+		],
+		"description": "map declaration"
+	},
+	"map declaration w/ initial values": {
+		"prefix": "mapinit",
+		"body": [
+			"var ${1:mapname} = map[${2:keytype}]${3:valtype}{${4:key1}: ${5:val1}, ${6:key2}: ${7:val2}, ${8:key3}: ${9:val3}}"
+		],
+		"description": "map declaration w/ initial values"
+	},
 	"slice declaration": {
 		"prefix": "slice",
 		"body": [
@@ -46,7 +60,7 @@
 			"type ${1:structname} struct {",
 			"  ${2:var1} ${3:type1}",
 			"  ${4:var2} ${5:type2}",
-			"{"
+			"}"
 		],
 		"description": "structure declaration"
 	}
