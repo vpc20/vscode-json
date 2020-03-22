@@ -54,6 +54,13 @@
 		],
 		"description": "slice declaration w/ initial values"
 	},
+	"make slice": {
+		"prefix": "slicemake",
+		"body": [
+			"${1:slicename} := make([]${2:type}, ${3:size})"
+		],
+		"description": "make slice"
+	},
 	"structure declaration": {
 		"prefix": "struct",
 		"body": [
