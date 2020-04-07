@@ -208,7 +208,7 @@
         "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     },
     {
-        "key": "alt+right",
+        "key": "ctrl+tab",
         "command": "workbench.action.nextEditor"
     },
     {
@@ -216,7 +216,7 @@
         "command": "-workbench.action.nextEditor"
     },
     {
-        "key": "alt+left",
+        "key": "ctrl+shift+tab",
         "command": "workbench.action.previousEditor"
     },
     {
