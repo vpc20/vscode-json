@@ -1,5 +1,5 @@
 {
-    "update.channel": "none",
+    "update.mode": "manual",
     "update.enableWindowsBackgroundUpdates": false,
     "telemetry.enableTelemetry": false,
     "update.showReleaseNotes": false,
@@ -18,5 +18,55 @@
     "breadcrumbs.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.pep8Enabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "extensions.ignoreRecommendations": false,
+    "files.associations": {
+        "*.COBOL*": "cobol",
+        "*.COB*": "cobol",
+        "*.COBCOPY*": "cobol",
+        "*.COPYBOOK*": "cobol",
+        "*.COPY*": "cobol",
+        "*.PL1*": "pl1",
+        "*.PLI*": "pl1",
+        "*.INC*": "pl1",
+        "*.INCLUDE*": "pl1",
+        "*.JCL*": "jcl"
+    },
+    "Zowe-DS-Persistent": {
+        "persistence": true,
+        "favorites": [],
+        "history": [
+            "Z57783"
+        ],
+        "sessions": [
+            "mtm"
+        ]
+    },
+    "Zowe-USS-Persistent": {
+        "persistence": true,
+        "favorites": [],
+        "history": [],
+        "sessions": [
+            "mtm"
+        ]
+    },
+    "Zowe-Jobs-Persistent": {
+        "persistence": true,
+        "favorites": [],
+        "history": [],
+        "sessions": [
+            "mtm"
+        ]
+    },
+    "Zowe Commands: History": {
+        "persistence": true,
+        "history": [],
+        "sessions": []
+    },
+    "zopeneditor.JAVA_HOME": "C:\\Program Files\\Java\\jdk1.8.0_121",
+    "zopeneditor.cobol.tabstops": [0, 7, 11, 15, 19, 23, 27, 31, 35, 72],
+    "[cobol]": {
+        "editor.rulers": [ 0, 72 ],
+    }
+    
 }
