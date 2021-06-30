@@ -17,9 +17,9 @@
     "editor.renderControlCharacters": false,
     "breadcrumbs.enabled": true,
     "python.linting.pylintEnabled": false,
-    "python.linting.pep8Enabled": true,
+    "python.linting.pycodestyleEnabled": true,
     "python.linting.enabled": true,
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "files.associations": {
         "*.COBOL*": "cobol",
         "*.COB*": "cobol",
@@ -64,9 +64,72 @@
         "sessions": []
     },
     "zopeneditor.JAVA_HOME": "C:\\Program Files\\Java\\jdk1.8.0_121",
-    "zopeneditor.cobol.tabstops": [0, 7, 11, 15, 19, 23, 27, 31, 35, 72],
+    "zopeneditor.cobol.tabstops": [0, 7, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44, 47, 50, 53, 56, 59, 62, 65, 72],
     "[cobol]": {
         "editor.rulers": [ 0, 72 ],
-    }
+    },
+    "editor.renderIndentGuides": false,
+    "pgsql.connections": [
+        {
+            "host": "127.0.0.1",
+            "dbname": "",
+            "user": "postgres",
+            "password": "",
+            "emptyPasswordInput": false,
+            "port": "5432",
+            "profileName": "postgres"
+        },
+        {
+            "host": "127.0.0.1",
+            "dbname": "parchposeydb",
+            "user": "postgres",
+            "password": "",
+            "emptyPasswordInput": false,
+            "port": "5432",
+            "profileName": "parchposey"
+        }
+    ],
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "git.ignoreWindowsGit27Warning": true,
+    "code-for-ibmi.connectionSettings": [
+        {
+            "name": "pub400",
+            "sourceFileList": [
+                "QSYSINC/H",
+                "VPCRZKH1/QCBLLESRC",
+                "VPCRZKH1/QRPGLESRC"
+            ],
+            "objectBrowserList": [
+                "QGPL",
+                "QTEMP",
+                "GAMES400"
+            ],
+            "databaseBrowserList": [
+                "QGPL",
+                "QTEMP",
+                "GAMES400"
+            ],
+            "libraryList": [
+                "QGPL",
+                "QTEMP",
+                "GAMES400"
+            ],
+            "homeDirectory": "/home/VPCRZKH",
+            "tempLibrary": "VPCRZKH1",
+            "currentLibrary": "VPCRZKH1",
+            "sourceFileCCSID": "*FILE",
+            "enableSQL": false,
+            "hideCompileErrors": []
+        }
+    ],
+    "code-for-ibmi.connections": [
+        {
+            "name": "pub400",
+            "host": "pub400.com",
+            "port": 2222,
+            "username": "vpcrzkh",
+            "privateKey": null
+        }
+    ]
     
 }

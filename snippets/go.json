@@ -48,7 +48,7 @@
 		"description": "slice declaration"
 	},
 	"slice declaration w/ initial values": {
-		"prefix": "sliceinit",
+		"prefix": "slice init",
 		"body": [
 			"${1:slicename} := []${2:type}{${3:val1}, ${4:val2}, ${5:val3}}"
 		],
