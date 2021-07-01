@@ -24,11 +24,42 @@
 		"description": "Declare Procedure Interface"
 	},
 
+	"Declare File": {
+		"prefix": "declare file externally-described",
+		"body": [
+		    "dcl-f filename keyed;",
+		],
+		"description": "Declare File"
+	},
+	
+	"Declare DS Key": {
+		"prefix": "declare ds key",
+		"body": [
+		    "dcl-ds keyDs likerec(recname:*key);",
+		],
+		"description": "Declare DS Key"
+	},
+	
 	"Declare Display File": {
 		"prefix": "declare dspf subfile",
 		"body": [
 			"dcl-f dspfname workstn indds(indic) sfile(sfilerec:recnum);",
 			"dcl-s recnum zoned(4:0);",	
+		],
+		"description": "Declare Display File"
+	},
+	
+	"Declare Printer File": {
+		"prefix": "declare prtf",
+		"body": [
+			"dcl-f prtfname printer indds(indic) oflind(*in90);",
+		],
+		"description": "Declare Printer File"
+	},
+	
+	"Declare Indicators": {
+		"prefix": "declare ds indicators",
+		"body": [
 			"dcl-ds indic qualified ;",
             "   exit      ind pos(03);",
             "   refresh   ind pos(05);",
@@ -41,8 +72,9 @@
             "   sflClr    ind pos(81);",
             "   pageDown  ind pos(90);",
             "   pageUp    ind pos(91);",
-            "end-ds;"
+            "end-ds;",
 		],
-		"description": "Declare Display File"
-	}
+		"description": "Declare Indicators"
+	},
+
 }
