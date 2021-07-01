@@ -77,4 +77,40 @@
 		"description": "Declare Indicators"
 	},
 
+	"For loop ascending": {
+		"prefix": "for loop ascending",
+		"body": [
+			"for i = 1 to 10;",
+            "endfor;",
+		],
+		"description": "For loop ascending"
+	},
+
+	"For loop ascending with increment": {
+		"prefix": "for loop ascending with increment",
+		"body": [
+			"for i = 2 by 2 to 10;",
+            "endfor;",
+		],
+		"description": "For loop ascending with increment"
+	},
+
+	"For loop descending": {
+		"prefix": "for loop descending",
+		"body": [
+			"for i = 10 downto 1;",
+            "endfor;",
+		],
+		"description": "For loop descending"
+	},
+
+	"For loop descending with increment": {
+		"prefix": "for loop descending with increment",
+		"body": [
+			"for i = 10 by 2 downto 2;",
+            "endfor;",
+		],
+		"description": "For loop descending with increment"
+	},
+
 }
