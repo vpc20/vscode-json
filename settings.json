@@ -30,7 +30,11 @@
         "*.PLI*": "pl1",
         "*.INC*": "pl1",
         "*.INCLUDE*": "pl1",
-        "*.JCL*": "jcl"
+        "*.JCL*": "jcl",
+        "*.ASM*": "hlasm",
+        "*.ASSEMBLE*": "hlasm",
+        "*.HLASM*": "hlasm",
+        "*.HLA*": "hlasm"
     },
     "Zowe-DS-Persistent": {
         "persistence": true,
@@ -129,6 +133,14 @@
             "port": 2222,
             "username": "vpcrzkh",
             "privateKey": null
+        }
+    ],
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/zapp.json"
+            ],
+            "url": "file:///c%3A/Users/vpc/.vscode/extensions/ibm.zopeneditor-1.2.5/resources/zapp-schema-0.0.2.json"
         }
     ]
     
