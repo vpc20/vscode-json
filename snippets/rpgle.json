@@ -17,8 +17,8 @@
 		"prefix": "declare pi",
 		"body": [
 			"dcl-pi *N;",
-			"   parm1 char(10);",
-			"   parm2 packed(9:2);",
+			"   ${1:parm1} char(10);",
+			"   ${2:parm2} packed(9:2);",
 			"end-pi;"		
 		],
 		"description": "Declare Procedure Interface"
@@ -27,7 +27,7 @@
 	"Declare File": {
 		"prefix": "declare file externally-described",
 		"body": [
-		    "dcl-f filename keyed;",
+		    "dcl-f ${1:filename} keyed;",
 		],
 		"description": "Declare File"
 	},
@@ -35,7 +35,7 @@
 	"Declare DS Key": {
 		"prefix": "declare ds key",
 		"body": [
-		    "dcl-ds keyDs likerec(recname:*key);",
+		    "dcl-ds ${1:keyDsName} likerec(${2:recname}:*key);",
 		],
 		"description": "Declare DS Key"
 	},
@@ -43,7 +43,7 @@
 	"Declare Display File": {
 		"prefix": "declare dspf subfile",
 		"body": [
-			"dcl-f dspfname workstn indds(indic) sfile(sfilerec:recnum);",
+			"dcl-f ${1:dspfname} workstn indds(${2:indic}) sfile(${3:sfilerec}:${4:recnum});",
 			"dcl-s recnum zoned(4:0);",	
 		],
 		"description": "Declare Display File"
@@ -52,7 +52,7 @@
 	"Declare Printer File": {
 		"prefix": "declare prtf",
 		"body": [
-			"dcl-f prtfname printer indds(indic) oflind(*in90);",
+			"dcl-f ${1:prtfname} printer indds(${2:indic}) oflind(${3:*in90});",
 		],
 		"description": "Declare Printer File"
 	},
@@ -60,7 +60,7 @@
 	"Declare Indicators": {
 		"prefix": "declare ds indicators",
 		"body": [
-			"dcl-ds indic qualified ;",
+			"dcl-ds ${1:indic} qualified ;",
             "   exit      ind pos(03);",
             "   refresh   ind pos(05);",
             "   addrec    ind pos(06);",
@@ -75,6 +75,110 @@
             "end-ds;",
 		],
 		"description": "Declare Indicators"
+	},
+
+	"Declare SQL smallint": {
+		"prefix": "declare SQL smallint",
+		"body": [
+			"dcl-s ${1:varname} int(5);",
+		],
+		"description": "Declare SQL smallint"
+	},
+
+	"Declare SQL integer": {
+		"prefix": "declare SQL integer",
+		"body": [
+			"dcl-s ${1:varname} int(10);",
+		],
+		"description": "Declare SQL integer"
+	},
+
+	"Declare SQL bigint": {
+		"prefix": "declare SQL bigint",
+		"body": [
+			"dcl-s ${1:varname} int(20);",
+		],
+		"description": "Declare SQL bigint"
+	},
+
+	"Declare SQL decimal": {
+		"prefix": "declare SQL decimal",
+		"body": [
+			"dcl-s ${1:varname} packed(9:2);",
+		],
+		"description": "Declare SQL decimal"
+	},
+
+	"Declare SQL numeric": {
+		"prefix": "declare SQL numeric",
+		"body": [
+			"dcl-s ${1:varname} zoned(9:2);",
+		],
+		"description": "Declare SQL numeric"
+	},
+
+	"Declare SQL float single precision": {
+		"prefix": "declare SQL float single precision",
+		"body": [
+			"dcl-s ${1:varname} float(4);",
+		],
+		"description": "Declare SQL float single precision"
+	},
+
+	"Declare SQL float double precision": {
+		"prefix": "declare SQL float double precision",
+		"body": [
+			"dcl-s ${1:varname} float(8);",
+		],
+		"description": "Declare SQL float double precision"
+	},
+
+	"Declare SQL char": {
+		"prefix": "declare SQL char",
+		"body": [
+			"dcl-s ${1:varname} char(${2:len});",
+		],
+		"description": "Declare SQL char"
+	},
+
+	"Declare SQL char using ds": {
+		"prefix": "declare SQL char using ds",
+		"body": [
+			"dcl-ds ${1:dsname} len(${2:n}) end-ds;",
+		],
+		"description": "Declare SQL char using ds"
+	},
+
+	"Declare SQL varchar": {
+		"prefix": "declare SQL varchar",
+		"body": [
+			"dcl-s ${1:varname} varchar(${2:len});",
+		],
+		"description": "Declare SQL varchar"
+	},
+
+	"Declare SQL date": {
+		"prefix": "declare SQL date",
+		"body": [
+			"dcl-s ${1:varname} date;",
+		],
+		"description": "Declare SQL date"
+	},
+
+	"Declare SQL time": {
+		"prefix": "declare SQL time",
+		"body": [
+			"dcl-s ${1:varname} time;",
+		],
+		"description": "Declare SQL time"
+	},
+
+	"Declare SQL timestamp": {
+		"prefix": "declare SQL timestamp",
+		"body": [
+			"dcl-s ${1:varname} timestamp(32);",
+		],
+		"description": "Declare SQL timestamp"
 	},
 
 	"For loop ascending": {
