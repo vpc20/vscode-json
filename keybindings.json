@@ -383,5 +383,10 @@
     {
         "key": "ctrl+\\",
         "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
     }
 ]
