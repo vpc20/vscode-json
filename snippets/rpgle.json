@@ -217,4 +217,52 @@
 		"description": "For loop descending with increment"
 	},
 
+	"Chain file": {
+		"prefix": "chain file",
+		"body": [
+			"chain (${1:keyfld1}:${2:keyfld2}:${3:keyfld3}) ${4:filename};",
+		],
+		"description": "Chain file"
+	},
+
+	"Chain file kds": {
+		"prefix": "chain file kds",
+		"body": [
+			"chain %kds(${1:keyDs}) ${2:filename};",
+		],
+		"description": "Chain file kds"
+	},
+
+	"Chain file kds partial key": {
+		"prefix": "chain file kds partial key",
+		"body": [
+			"chain %kds(${1:keyDs}:${2:numkeys}) ${3:filename};",
+		],
+		"description": "Chain file kds partial key"
+	},
+
+	"Chain subfile": {
+		"prefix": "chain subfile",
+		"body": [
+			"chain ${1:sflrecnum} ${2:sflrecname};",
+		],
+		"description": "Chain subfile"
+	},
+
+	"Setll file kds": {
+		"prefix": "Setll file kds",
+		"body": [
+			"setll %kds(${1:keyDs}) ${2:recname};",
+		],
+		"description": "Setll file kds"
+	},
+
+	"Setll file kds partial key": {
+		"prefix": "Setll file kds partial key",
+		"body": [
+			"setll %kds(${1:keyDs}:${2:numkeys}) ${3:recname};",
+		],
+		"description": "Setll file kds partial key"
+	},
+
 }
