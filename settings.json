@@ -93,15 +93,15 @@
             "profileName": "parchposey"
         }
     ],
-    "extensions.showRecommendationsOnlyOnDemand": true,
+    /* "extensions.showRecommendationsOnlyOnDemand": true,*/
     "git.ignoreWindowsGit27Warning": true,
     "code-for-ibmi.connectionSettings": [
         {
             "name": "pub400",
             "sourceFileList": [
-                "QSYSINC/H",
                 "VPCRZKH1/QCBLLESRC",
-                "VPCRZKH1/QRPGLESRC"
+                "VPCRZKH1/QRPGLESRC",
+                "VPCRZKH1/QDDSSRC"
             ],
             "objectBrowserList": [
                 "QGPL",

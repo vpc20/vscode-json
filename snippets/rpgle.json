@@ -13,6 +13,19 @@
 	// 	"description": "Log output to console"
 	// }
 
+	"Declare Procedure": {
+		"prefix": "declare procedure",
+		"body": [
+			"dcl-proc ${1:ProcName};",
+			"   dcl-pi *n int(5);",
+			"     ${2:parm1}   char(5) const;",
+			"     ${3:parm2}   int(5); ",
+			"   end-pi;",
+		    "end-proc;",
+		],
+ 		"description": "Declare Procedure"
+	},
+
 	"Declare Procedure Interface": {
 		"prefix": "declare pi",
 		"body": [
@@ -38,6 +51,14 @@
 		    "dcl-ds ${1:keyDsName} likerec(${2:recname}:*key);",
 		],
 		"description": "Declare DS Key"
+	},
+	
+	"Declare DS like record": {
+		"prefix": "declare ds likerec",
+		"body": [
+		    "dcl-ds ${1:dsName} likerec(${2:recname}:*all);",
+		],
+		"description": "Declare DS like record"
 	},
 	
 	"Declare Display File": {
@@ -250,7 +271,7 @@
 	},
 
 	"Setll file kds": {
-		"prefix": "Setll file kds",
+		"prefix": "setll file kds",
 		"body": [
 			"setll %kds(${1:keyDs}) ${2:recname};",
 		],
@@ -258,11 +279,27 @@
 	},
 
 	"Setll file kds partial key": {
-		"prefix": "Setll file kds partial key",
+		"prefix": "setll file kds partial key",
 		"body": [
 			"setll %kds(${1:keyDs}:${2:numkeys}) ${3:recname};",
 		],
 		"description": "Setll file kds partial key"
 	},
-
+	
+	"Write record to file": {
+		"prefix": "write record to file",
+		"body": [
+			"write ${1:recname};",
+		],
+		"description": "Write record to file"
+	},
+	
+	"Execute format": {
+		"prefix": "execute format",
+		"body": [
+			"exfmt ${1:recname};",
+		],
+		"description": "Execute format"
+	},
+	
 }
