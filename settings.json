@@ -21,6 +21,8 @@
     "python.linting.enabled": true,
     "extensions.ignoreRecommendations": true,
     "files.associations": {
+        "*.CBL*": "cobol",
+        "*.CBLLE*": "cobol",
         "*.COBOL*": "cobol",
         "*.COB*": "cobol",
         "*.COBCOPY*": "cobol",
@@ -34,7 +36,9 @@
         "*.ASM*": "hlasm",
         "*.ASSEMBLE*": "hlasm",
         "*.HLASM*": "hlasm",
-        "*.HLA*": "hlasm"
+        "*.HLA*": "hlasm",
+        "*.RPGLE": "rpgle",
+        "*.CBLLE": "COBOL"
     },
     "Zowe-DS-Persistent": {
         "persistence": true,
@@ -142,6 +146,255 @@
             ],
             "url": "file:///c%3A/Users/vpc/.vscode/extensions/ibm.zopeneditor-1.2.5/resources/zapp-schema-0.0.2.json"
         }
-    ]
+    ],
+    "[COBOL]": {
+
+        "editor.semanticHighlighting.enabled": false,
+        "files.autoGuessEncoding": false,
+        "editor.snippetSuggestions": "bottom",
+        "editor.renderIndentGuides": false,
+        "editor.autoIndent": "advanced",
+        "editor.insertSpaces": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            // 6,
+            // 7,
+            // 11,
+            // 72
+        ],
+        "editor.detectIndentation": false,
+        "editor.useTabStops": true,
+        "editor.wordSeparators": "`~!@$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "coboleditor.tabstops": [
+    
+        0,
+        7,
+        11,
+        15,
+        18,
+        // 23,
+        // 27,
+        // 31,
+        // 35,
+        // 39,
+        // 43,
+        // 47,
+        // 51,
+        // 55,
+        // 59,
+        // 63,
+        // 67,
+        // 71,
+        // 75,
+        // 79
+    ],
+    "editor.tabCompletion": "on",
+    "code-for-ibmi.actions": [
+
+
+        {
+            "type": "member",
+            "extensions": [
+                "CBLLE",
+                "CBL"
+            ],
+            "name": "Create Bound RPG Program (CRTBNDCBL)",
+            "command": "CRTBNDCBL PGM(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "RPGLE",
+                "RPG"
+            ],
+            "name": "Create Bound RPG Program (CRTBNDRPG)",
+            "command": "CRTBNDRPG PGM(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "SQLRPGLE"
+            ],
+            "name": "Create SQL ILE RPG Program (CRTSQLRPGI)",
+            "command": "?CRTSQLRPGI OBJ(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) CLOSQLCSR(*ENDMOD) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "RPGLE",
+                "RPG"
+            ],
+            "name": "Create RPG Module (CRTRPGMOD)",
+            "command": "?CRTRPGMOD MODULE(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "CMD"
+            ],
+            "name": "Create Command (CRTCMD)",
+            "command": "?CRTCMD CMD(&OPENLIB/&OPENMBR) PGM(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) ALLOW(*ALL) CURLIB(*NOCHG) PRDLIB(*NOCHG)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "CMD"
+            ],
+            "name": "Create Command (Allow Return Variables - CRTCMD)",
+            "command": "?CRTCMD CMD(&OPENLIB/&OPENMBR) PGM(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) ALLOW(ALLOW(*BPGM *IPGM *BMOD *IMOD) ) CURLIB(*NOCHG) PRDLIB(*NOCHG)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "pf",
+                "lf"
+            ],
+            "name": "Delete File (DLTF)",
+            "command": "?DLTF FILE(&OPENLIB/&OPENMBR)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "dspf"
+            ],
+            "name": "Create Display File (CRTDSPF)",
+            "command": "?CRTDSPF FILE(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) SRCMBR(&OPENMBR) RSTDSP(*NO) REPLACE(*YES)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "pf"
+            ],
+            "name": "Create Physical File (CRTPF)",
+            "command": "?CRTPF FILE(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) SRCMBR(&OPENMBR) SIZE(*NOMAX) MAXMBRS(1)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "lf"
+            ],
+            "name": "Create :Logical File (CRTLF)",
+            "command": "?CRTLF FILE(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "CLP",
+                "CLLE"
+            ],
+            "name": "Create CL Program (CRTCLP)",
+            "command": "?CRTCLPGM PGM(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) OUTPUT(*PRINT) REPLACE(*YES)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "CLP",
+                "CLLE"
+            ],
+            "name": "Create Bound CL Program (CRTBNDCL)",
+            "command": "?CRTBNDCL PGM(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) OPTION(*EVENTF) DBGVIEW(*SOURCE)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "PNLGRP"
+            ],
+            "name": "Create Panel Group (CRTPNLGRP)",
+            "command": "?CRTPNLGRP PNLGRP(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) SRCMBR(&OPENMBR) OPTION(*EVENTF)"
+        },
+        {
+            "type": "member",
+            "extensions": [
+                "GLOBAL"
+            ],
+            "name": "Create Program (CRTPGM)",
+            "command": "?CRTPGM PGM(&OPENLIB/&OPENMBR) MODULE(*PGM) ENTMOD(*FIRST) BNDSRVPGM(*NONE) BNDDIR(*NONE) ACTGRP(*ENTMOD) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "rpgle"
+            ],
+            "name": "Create Bound RPG Program (CRTBNDRPG) with inputs",
+            "command": "CRTBNDRPG PGM(${buildlib|Build library|&BUILDLIB}/${objectname|Object Name|&NAME}) SRCSTMF('${sourcePath|Source path|&FULLPATH}') OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "RPGLE",
+                "RPG"
+            ],
+            "name": "Create Bound RPG Program (CRTBNDRPG)",
+            "command": "CRTBNDRPG PGM(&BUILDLIB/&NAME) SRCSTMF('&FULLPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "SQLRPGLE"
+            ],
+            "name": "Create SQL ILE RPG Program (CRTSQLRPGI)",
+            "command": "?CRTSQLRPGI OBJ(&BUILDLIB/&NAME) SRCSTMF('&FULLPATH') CLOSQLCSR(*ENDMOD) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "RPGLE",
+                "RPG"
+            ],
+            "name": "Create RPG Module (CRTRPGMOD)",
+            "command": "?CRTRPGMOD MODULE(&BUILDLIB/&NAME) SRCSTMF('&FULLPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "CLP",
+                "CLLE"
+            ],
+            "name": "Create Bound CL Program (CRTBNDCL)",
+            "command": "?CRTBNDCL PGM(&BUILDLIB/&NAME) SRCSTMF('&FULLPATH') OPTION(*EVENTF) DBGVIEW(*SOURCE)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "cmd"
+            ],
+            "name": "Create Command (CRTCMD)",
+            "command": "?CRTCMD CMD(&BUILDLIB/&NAME) PGM(&BUILDLIB/&NAME) SRCSTMF('&FULLPATH') OPTION(*EVENTF)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "cmd"
+            ],
+            "name": "Create Command (Allow Return Variables - CRTCMD)",
+            "command": "?CRTCMD CMD(&BUILDLIB/&NAME) PGM(&BUILDLIB/&NAME) SRCSTMF('&FULLPATH') ALLOW(*BPGM *IPGM *BMOD *IMOD *BREXX *IREXX) OPTION(*EVENTF)"
+        },
+        {
+            "type": "streamfile",
+            "extensions": [
+                "GLOBAL"
+            ],
+            "name": "Set CCSID to 1252",
+            "environment": "pase",
+            "command": "setccsid 1252 &FULLPATH"
+        },
+        {
+            "type": "object",
+            "extensions": [
+                "GLOBAL"
+            ],
+            "name": "Delete object",
+            "command": "?DLTOBJ OBJ(&LIBRARY/&NAME) OBJTYPE(*&TYPE)"
+        },
+        {
+            "type": "object",
+            "extensions": [
+                "pgm"
+            ],
+            "name": "Call program",
+            "command": "?CALL &LIBRARY/&NAME"
+        }
+    ],
     
 }
