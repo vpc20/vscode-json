@@ -302,4 +302,20 @@
 		"description": "Execute format"
 	},
 	
+	"Update record": {
+		"prefix": "Update record",
+		"body": [
+			"update ${1:recname};",
+		],
+		"description": "Update record"
+	},
+
+	"Delete record": {
+		"prefix": "Delete record",
+		"body": [
+			"delete ${1:recname};",
+		],
+		"description": "Delete record"
+	},
+	
 }
