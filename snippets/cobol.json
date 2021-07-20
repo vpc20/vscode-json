@@ -58,6 +58,18 @@
 		"description": "read file sequential"
 	},
 
+	"read file sequential prior": {
+		"prefix": "read file sequential prior",
+		"body": [
+			"SET NOT-EOF-${1:FILENAME} TO TRUE.",
+			"READ ${1:FILENAME} PRIOR RECORD",
+			"   AT END",
+			"      SET EOF-${1:FILENAME} TO TRUE",
+		    "END-READ.",
+		],
+		"description": "read file sequential prior"
+	},
+
 	"read file indexed": {
 		"prefix": "read file indexed",
 		"body": [
@@ -68,6 +80,46 @@
 		    "END-READ.",
 		],
 		"description": "read file indexed"
+	},
+
+	"read display file": {
+		"prefix": "read display file",
+		"body": [
+			"READ ${1:FILENAME} INTO ${2:DSPREC-FORMAT}-I",
+			"   FORMAT '${2:DSPREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+		],
+		"description": "read display file"
+	},
+
+	"read subfile": {
+		"prefix": "read subfile",
+		"body": [
+            "SET ${2:SFLREC-FORMAT}-FOUND TO TRUE",
+			"READ SUBFILE ${1:FILENAME} INTO ${2:SFLREC-FORMAT}-I",
+			"   FORMAT '${2:SFLREC-FORMAT}' INDICATORS ${3:INDIC-DS}",
+			"   INVALID KEY",
+            "      SET ${2:SFLREC-FORMAT}-NOT-FOUND TO TRUE",
+            "END-READ.",
+		],
+		"description": "read subfile"
+	},
+
+	"write display file": {
+		"prefix": "write display file",
+		"body": [
+			"WRITE ${1:DSPREC-NAME} FROM ${2:DSPREC-FORMAT}-I",
+			"   FORMAT '${2:DSPREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+		],
+		"description": "write display file"
+	},
+
+	"write subfile": {
+		"prefix": "write subfile",
+		"body": [
+			"WRITE SUBFILE ${1:SFLREC-NAME} INTO ${2:SFLREC-FORMAT}-I",
+			"   FORMAT '${2:SFLREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+		],
+		"description": "write subfile"
 	},
 
 }
