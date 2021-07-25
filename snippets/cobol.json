@@ -19,6 +19,7 @@
 			"05 ${1:FILENAME}-EOF-SW         PIC 9.",
   			"   88 NOT-EOF-${1:FILENAME}     VALUE 0.",
 			"   88 EOF-${1:FILENAME}         VALUE 1.",
+            "$0",
 		],
 		"description": "define eof sw"
 	},
@@ -29,6 +30,8 @@
 			"05 ${1:FILENAME}-FOUND-SW         PIC 9.",
   			"   88 ${1:FILENAME}-NOT-FOUND     VALUE 0.",
 			"   88 ${1:FILENAME}-FOUND         VALUE 1.",
+            "$0",
+
 		],
 		"description": "define found sw"
 	},
@@ -42,6 +45,7 @@
             "   INVALID KEY",
             "      SET EOF-${1:FILENAME} TO TRUE",
             "END-START.",
+            "$0",
 		],
 		"description": "start file"
 	},
@@ -54,6 +58,7 @@
 			"   AT END",
 			"      SET EOF-${1:FILENAME} TO TRUE",
 		    "END-READ.",
+            "$0",
 		],
 		"description": "read file sequential"
 	},
@@ -66,6 +71,7 @@
 			"   AT END",
 			"      SET EOF-${1:FILENAME} TO TRUE",
 		    "END-READ.",
+            "$0",
 		],
 		"description": "read file sequential prior"
 	},
@@ -78,6 +84,7 @@
 			"   INVALID KEY",
 			"      SET ${1:FILENAME}-NOT-FOUND TO TRUE",
 		    "END-READ.",
+            "$0",
 		],
 		"description": "read file indexed"
 	},
@@ -87,6 +94,7 @@
 		"body": [
 			"READ ${1:FILENAME} INTO ${2:DSPREC-FORMAT}-I",
 			"   FORMAT '${2:DSPREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+            "$0",
 		],
 		"description": "read display file"
 	},
@@ -100,8 +108,18 @@
 			"   INVALID KEY",
             "      SET ${2:SFLREC-FORMAT}-NOT-FOUND TO TRUE",
             "END-READ.",
+            "$0",
 		],
 		"description": "read subfile"
+	},
+
+	"write record": {
+		"prefix": "write record",
+		"body": [
+			"WRITE ${1:RECNAME}.",
+            "$0",
+		],
+		"description": "write record"
 	},
 
 	"write display file": {
@@ -109,6 +127,7 @@
 		"body": [
 			"WRITE ${1:DSPREC-NAME} FROM ${2:DSPREC-FORMAT}-I",
 			"   FORMAT '${2:DSPREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+            "$0",
 		],
 		"description": "write display file"
 	},
@@ -116,10 +135,167 @@
 	"write subfile": {
 		"prefix": "write subfile",
 		"body": [
-			"WRITE SUBFILE ${1:SFLREC-NAME} INTO ${2:SFLREC-FORMAT}-I",
+			"WRITE SUBFILE ${1:SFLREC-NAME} FROM ${2:SFLREC-FORMAT}-O",
 			"   FORMAT '${2:SFLREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+            "$0",
 		],
 		"description": "write subfile"
+	},
+
+	"rewrite record": {
+		"prefix": "rewrite record",
+		"body": [
+			"REWRITE ${1:RECNAME}.",
+            "$0",
+		],
+		"description": "rewrite record"
+	},
+
+	"rewrite subfile": {
+		"prefix": "rewrite subfile",
+		"body": [
+			"REWRITE SUBFILE ${1:SFLREC-NAME} FROM ${2:SFLREC-FORMAT}-O",
+			"   FORMAT '${2:SFLREC-FORMAT}' INDICATORS ${3:INDIC-DS}.",
+            "$0",
+		],
+		"description": "rewrite subfile"
+	},
+
+	"delete record": {
+		"prefix": "delete record",
+		"body": [
+			"DELETE ${1:FILENAME}.",
+            "$0",
+		],
+		"description": "delete record"
+	},
+
+	"pic sql smallint": {
+		"prefix": "pic sql smallint",
+		"body": [
+			"PIC S9(4) COMP-4.",
+		],
+		"description": "pic sql smallint"
+	},
+
+	"pic sql integer": {
+		"prefix": "pic sql integer",
+		"body": [
+			"PIC S9(9) COMP-4.",
+		],
+		"description": "pic sql integer"
+	},
+
+	"pic sql bigint": {
+		"prefix": "pic sql bigint",
+		"body": [
+			"PIC S9(18) COMP-4.",
+		],
+		"description": "pic sql bigint"
+	},
+
+	"pic sql decimal": {
+		"prefix": "pic sql decimal",
+		"body": [
+			"PIC S9(${1:p-s})V9(${2:s}) COMP-3.",
+		],
+		"description": "pic sql decimal"
+	},
+
+	"pic sql numeric": {
+		"prefix": "pic sql numeric",
+		"body": [
+			"PIC S9(${1:p-s})V9(${2:s}).",
+		],
+		"description": "pic sql numeric"
+	},
+
+	"pic sql float single precision": {
+		"prefix": "pic sql float single precision",
+		"body": [
+			"USAGE COMP-1.",
+		],
+		"description": "pic sql float single precision"
+	},
+
+	"pic sql float double precision": {
+		"prefix": "pic sql float double precision",
+		"body": [
+			"USAGE COMP-2.",
+		],
+		"description": "pic sql float double precision"
+	},
+
+	"pic sql char": {
+		"prefix": "pic sql char",
+		"body": [
+			"PIC X(${1:n}).",
+		],
+		"description": "pic sql char"
+	},
+
+	"pic sql clob": {
+		"prefix": "pic sql clob",
+		"body": [
+			"SQL TYPE IS CLOB.",
+		],
+		"description": "pic sql clob"
+	},
+
+	"pic sql dbclob": {
+		"prefix": "pic sql dbclob",
+		"body": [
+			"SQL TYPE IS DBCLOB.",
+		],
+		"description": "pic sql dbclob"
+	},
+
+	"pic sql blob": {
+		"prefix": "pic sql blob",
+		"body": [
+			"SQL TYPE IS BLOB.",
+		],
+		"description": "pic sql blob"
+	},
+
+	"pic sql binary": {
+		"prefix": "pic sql binary",
+		"body": [
+			"SQL TYPE IS BINARY.",
+		],
+		"description": "pic sql binary"
+	},
+
+	"pic sql varbinary": {
+		"prefix": "pic sql varbinary",
+		"body": [
+			"SQL TYPE IS VARBINARY.",
+		],
+		"description": "pic sql varbinary"
+	},
+
+	"pic sql date": {
+		"prefix": "pic sql date",
+		"body": [
+			"FORMAT DATE.",
+		],
+		"description": "pic sql date"
+	},
+
+	"pic sql time": {
+		"prefix": "pic sql time",
+		"body": [
+			"FORMAT TIME.",
+		],
+		"description": "pic sql time"
+	},
+
+	"pic sql timestamp": {
+		"prefix": "pic sql timestamp",
+		"body": [
+			"FORMAT TIMESTAMP.",
+		],
+		"description": "pic sql timestamp"
 	},
 
 }

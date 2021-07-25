@@ -22,7 +22,7 @@
     "extensions.ignoreRecommendations": true,
     "files.associations": {
         "*.CBL*": "cobol",
-        "*.CBLLE*": "cobol",
+        // "*.CBLLE*": "cobol",
         "*.COBOL*": "cobol",
         "*.COB*": "cobol",
         "*.COBCOPY*": "cobol",
@@ -38,7 +38,7 @@
         "*.HLASM*": "hlasm",
         "*.HLA*": "hlasm",
         "*.RPGLE": "rpgle",
-        "*.CBLLE": "COBOL"
+        "*.cblle": "COBOL"
     },
     "Zowe-DS-Persistent": {
         "persistence": true,
@@ -149,6 +149,8 @@
     ],
     "[COBOL]": {
 
+
+
         "editor.semanticHighlighting.enabled": false,
         "files.autoGuessEncoding": false,
         "editor.snippetSuggestions": "bottom",
@@ -192,7 +194,6 @@
     "editor.tabCompletion": "on",
     "code-for-ibmi.actions": [
 
-
         {
             "type": "member",
             "extensions": [
@@ -217,7 +218,7 @@
                 "SQLRPGLE"
             ],
             "name": "Create SQL ILE RPG Program (CRTSQLRPGI)",
-            "command": "?CRTSQLRPGI OBJ(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) CLOSQLCSR(*ENDMOD) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
+            "command": "CRTSQLRPGI OBJ(&OPENLIB/&OPENMBR) SRCFILE(&OPENLIB/&OPENSPF) CLOSQLCSR(*ENDMOD) OPTION(*EVENTF) DBGVIEW(*SOURCE) TGTRLS(*CURRENT)"
         },
         {
             "type": "member",

@@ -90,4 +90,13 @@
 		"description": "for statement"
 	},
 
+	"Declare Handler": {
+		"prefix": "declare handler",
+		"body": [
+			"declare ${1:continue/exit/undo} handler for ${2:sqlexception/sqlwarning/not found/sqlstate 'xxxxx'}",
+			"   ${3:sql_statement};",
+		],
+		"description": "declare handler"
+	},
+
 }
