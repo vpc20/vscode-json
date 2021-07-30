@@ -237,31 +237,111 @@
 	"pic sql clob": {
 		"prefix": "pic sql clob",
 		"body": [
-			"SQL TYPE IS CLOB.",
+			"SQL TYPE IS CLOB(${1:len}).",
 		],
 		"description": "pic sql clob"
+	},
+
+	"pic sql clob locator": {
+		"prefix": "pic sql clob locator",
+		"body": [
+			"SQL TYPE IS CLOB-LOCATOR.",
+		],
+		"description": "pic sql clob locator"
+	},
+
+	"pic sql clob file": {
+		"prefix": "pic sql clob file",
+		"body": [
+			"SQL TYPE IS CLOB-FILE.",
+		],
+		"description": "pic sql clob file"
 	},
 
 	"pic sql dbclob": {
 		"prefix": "pic sql dbclob",
 		"body": [
-			"SQL TYPE IS DBCLOB.",
+			"SQL TYPE IS DBCLOB(${1:len}).",
 		],
 		"description": "pic sql dbclob"
+	},
+
+	"pic sql dbclob locator": {
+		"prefix": "pic sql dbclob locator",
+		"body": [
+			"SQL TYPE IS DBCLOB-LOCATOR.",
+		],
+		"description": "pic sql dbclob locator"
+	},
+
+	"pic sql dbclob file": {
+		"prefix": "pic sql dbclob file",
+		"body": [
+			"SQL TYPE IS DBCLOB-FILE.",
+		],
+		"description": "pic sql dbclob file"
 	},
 
 	"pic sql blob": {
 		"prefix": "pic sql blob",
 		"body": [
-			"SQL TYPE IS BLOB.",
+			"SQL TYPE IS BLOB(${1:len}).",
 		],
 		"description": "pic sql blob"
+	},
+
+	"pic sql blob locator": {
+		"prefix": "pic sql blob locator",
+		"body": [
+			"SQL TYPE IS BLOB-LOCATOR.",
+		],
+		"description": "pic sql blob locator"
+	},
+
+	"pic sql blob file": {
+		"prefix": "pic sql blob file",
+		"body": [
+			"SQL TYPE IS BLOB-FILE.",
+		],
+		"description": "pic sql blob file"
+	},
+
+	"pic sql xml clob": {
+		"prefix": "pic sql xml clob",
+		"body": [
+			"SQL TYPE IS XML as CLOB(${1:len}).",
+		],
+		"description": "pic sql xml clob"
+	},
+
+	"pic sql xml dbclob": {
+		"prefix": "pic sql xml dbclob",
+		"body": [
+			"SQL TYPE IS XML as DBCLOB(${1:len}).",
+		],
+		"description": "pic sql xml dbclob"
+	},
+
+	"pic sql xml blob": {
+		"prefix": "pic sql xml blob",
+		"body": [
+			"SQL TYPE IS XML as BLOB(${1:len}).",
+		],
+		"description": "pic sql xml blob"
+	},
+
+	"pic sql xml locator": {
+		"prefix": "pic sql xml locator",
+		"body": [
+			"SQL TYPE IS XML-LOCATOR.",
+		],
+		"description": "pic sql xml locator"
 	},
 
 	"pic sql binary": {
 		"prefix": "pic sql binary",
 		"body": [
-			"SQL TYPE IS BINARY.",
+			"SQL TYPE IS BINARY(${1:len}).",
 		],
 		"description": "pic sql binary"
 	},
@@ -269,7 +349,7 @@
 	"pic sql varbinary": {
 		"prefix": "pic sql varbinary",
 		"body": [
-			"SQL TYPE IS VARBINARY.",
+			"SQL TYPE IS VARBINARY(${1:len}).",
 		],
 		"description": "pic sql varbinary"
 	},
