@@ -290,6 +290,78 @@
 		"description": "Declare SQL blob file"
 	},
 
+	"Declare SQL xml clob": {
+		"prefix": "declare SQL xml clob",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_clob:${2:len});",
+		],
+		"description": "Declare SQL xml clob"
+	},
+
+	"Declare SQL xml dbclob": {
+		"prefix": "declare SQL xml dbclob",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_dbclob:${2:len});",
+		],
+		"description": "Declare SQL xml dbclob"
+	},
+
+	"Declare SQL xml blob": {
+		"prefix": "declare SQL xml blob",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_blob:${2:len});",
+		],
+		"description": "Declare SQL xml blob"
+	},
+
+	"Declare SQL xml locator": {
+		"prefix": "declare SQL xml locator",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_locator);",
+		],
+		"description": "Declare SQL xml locator"
+	},
+
+	"Declare SQL xml clob file": {
+		"prefix": "declare SQL xml clob file",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_clob_file);",
+		],
+		"description": "Declare SQL xml clob file"
+	},
+
+	"Declare SQL xml dbclob file": {
+		"prefix": "declare SQL xml dbclob file",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_dbclob_file);",
+		],
+		"description": "Declare SQL xml dbclob file"
+	},
+
+	"Declare SQL xml blob file": {
+		"prefix": "declare SQL xml blob file",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(xml_blob_file);",
+		],
+		"description": "Declare SQL xml blob file"
+	},
+
+	"Declare SQL rowid": {
+		"prefix": "declare SQL rowid",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(rowid);",
+		],
+		"description": "Declare SQL rowid"
+	},
+
+	"Declare SQL result set locator": {
+		"prefix": "declare SQL result set locator",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(result_set_locator);",
+		],
+		"description": "Declare SQL result set locator"
+	},
+
 	"For loop ascending": {
 		"prefix": "for loop ascending",
 		"body": [

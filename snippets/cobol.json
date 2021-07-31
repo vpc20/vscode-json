@@ -170,6 +170,94 @@
 		"description": "delete record"
 	},
 
+	"pic alphanumeric": {
+		"prefix": "pic alphanumeric",
+		"body": [
+			"PIC X(${1:len}).",
+		],
+		"description": "pic alphanumeric"
+	},
+
+	"pic zoned decimal": {
+		"prefix": "pic zoned decimal",
+		"body": [
+			"PIC 9(${1:len})v99.",
+		],
+		"description": "pic zoned decimal"
+	},
+
+	"pic packed decimal": {
+		"prefix": "pic packed decimal",
+		"body": [
+			"PIC 9(${1:len})v99  COMP-3.",
+		],
+		"description": "pic packed decimal"
+	},
+
+	"pic binary 2-byte": {
+		"prefix": "pic binary 2-byte",
+		"body": [
+			"PIC 9(4)  COMP-4.",
+		],
+		"description": "pic binary 2-byte"
+	},
+
+	"pic binary 4-byte": {
+		"prefix": "pic binary 4-byte",
+		"body": [
+			"PIC 9(9)  COMP-4.",
+		],
+		"description": "pic binary 4-byte"
+	},
+
+	"pic binary 8-byte": {
+		"prefix": "pic binary 8-byte",
+		"body": [
+			"PIC 9(18)  COMP-4.",
+		],
+		"description": "pic binary 8-byte"
+	},
+
+	"pic native binary 2-byte": {
+		"prefix": "pic native binary 2-byte",
+		"body": [
+			"PIC 9(4)  COMP-5.",
+		],
+		"description": "pic native binary 2-byte"
+	},
+
+	"pic native binary 4-byte": {
+		"prefix": "pic native binary 4-byte",
+		"body": [
+			"PIC 9(9)  COMP-5.",
+		],
+		"description": "pic native binary 4-byte"
+	},
+
+	"pic native binary 8-byte": {
+		"prefix": "pic native binary 8-byte",
+		"body": [
+			"PIC 9(18)  COMP-5.",
+		],
+		"description": "pic native binary 8-byte"
+	},
+
+	"pic float 4-byte": {
+		"prefix": "pic float 4-byte",
+		"body": [
+			"USAGE COMP-1.",
+		],
+		"description": "pic float 4-byte"
+	},
+
+	"pic float 8-byte": {
+		"prefix": "pic float 8-byte",
+		"body": [
+			"USAGE COMP-2.",
+		],
+		"description": "pic float 8-byte"
+	},
+
 	"pic sql smallint": {
 		"prefix": "pic sql smallint",
 		"body": [
