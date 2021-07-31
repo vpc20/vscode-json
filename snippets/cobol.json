@@ -309,7 +309,7 @@
 	"pic sql xml clob": {
 		"prefix": "pic sql xml clob",
 		"body": [
-			"SQL TYPE IS XML as CLOB(${1:len}).",
+			"SQL TYPE IS XML AS CLOB(${1:len}).",
 		],
 		"description": "pic sql xml clob"
 	},
@@ -317,7 +317,7 @@
 	"pic sql xml dbclob": {
 		"prefix": "pic sql xml dbclob",
 		"body": [
-			"SQL TYPE IS XML as DBCLOB(${1:len}).",
+			"SQL TYPE IS XML AS DBCLOB(${1:len}).",
 		],
 		"description": "pic sql xml dbclob"
 	},
@@ -325,9 +325,33 @@
 	"pic sql xml blob": {
 		"prefix": "pic sql xml blob",
 		"body": [
-			"SQL TYPE IS XML as BLOB(${1:len}).",
+			"SQL TYPE IS XML AS BLOB(${1:len}).",
 		],
 		"description": "pic sql xml blob"
+	},
+
+	"pic sql xml clob file": {
+		"prefix": "pic sql xml clob file",
+		"body": [
+			"SQL TYPE IS XML AS CLOB-FILE.",
+		],
+		"description": "pic sql xml clob file"
+	},
+
+	"pic sql xml dbclob file": {
+		"prefix": "pic sql xml dbclob file",
+		"body": [
+			"SQL TYPE IS XML AS DBCLOB-FILE.",
+		],
+		"description": "pic sql xml dbclob file"
+	},
+
+	"pic sql xml blob file": {
+		"prefix": "pic sql xml blob file",
+		"body": [
+			"SQL TYPE IS XML AS BLOB-FILE.",
+		],
+		"description": "pic sql xml blob file"
 	},
 
 	"pic sql xml locator": {
@@ -376,6 +400,22 @@
 			"FORMAT TIMESTAMP.",
 		],
 		"description": "pic sql timestamp"
+	},
+
+	"pic sql rowid": {
+		"prefix": "pic sql rowid",
+		"body": [
+			"SQL TYPE IS ROWID.",
+		],
+		"description": "pic sql rowid"
+	},
+
+	"pic sql result set locator": {
+		"prefix": "pic sql result set locator",
+		"body": [
+			"SQL TYPE IS  RESULT-SET-LOCATOR.",
+		],
+		"description": "pic sql result set locator"
 	},
 
 }

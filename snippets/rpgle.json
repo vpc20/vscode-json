@@ -101,7 +101,7 @@
 	"Declare SQL smallint": {
 		"prefix": "declare SQL smallint",
 		"body": [
-			"dcl-s ${1:varname} int(5);",
+			"dcl-s ${1:varname}   int(5);",
 		],
 		"description": "Declare SQL smallint"
 	},
@@ -109,7 +109,7 @@
 	"Declare SQL integer": {
 		"prefix": "declare SQL integer",
 		"body": [
-			"dcl-s ${1:varname} int(10);",
+			"dcl-s ${1:varname}   int(10);",
 		],
 		"description": "Declare SQL integer"
 	},
@@ -117,7 +117,7 @@
 	"Declare SQL bigint": {
 		"prefix": "declare SQL bigint",
 		"body": [
-			"dcl-s ${1:varname} int(20);",
+			"dcl-s ${1:varname}   int(20);",
 		],
 		"description": "Declare SQL bigint"
 	},
@@ -125,7 +125,7 @@
 	"Declare SQL decimal": {
 		"prefix": "declare SQL decimal",
 		"body": [
-			"dcl-s ${1:varname} packed(9:2);",
+			"dcl-s ${1:varname}   packed(9:2);",
 		],
 		"description": "Declare SQL decimal"
 	},
@@ -133,7 +133,7 @@
 	"Declare SQL numeric": {
 		"prefix": "declare SQL numeric",
 		"body": [
-			"dcl-s ${1:varname} zoned(9:2);",
+			"dcl-s ${1:varname}   zoned(9:2);",
 		],
 		"description": "Declare SQL numeric"
 	},
@@ -141,7 +141,7 @@
 	"Declare SQL float single precision": {
 		"prefix": "declare SQL float single precision",
 		"body": [
-			"dcl-s ${1:varname} float(4);",
+			"dcl-s ${1:varname}   float(4);",
 		],
 		"description": "Declare SQL float single precision"
 	},
@@ -149,7 +149,7 @@
 	"Declare SQL float double precision": {
 		"prefix": "declare SQL float double precision",
 		"body": [
-			"dcl-s ${1:varname} float(8);",
+			"dcl-s ${1:varname}   float(8);",
 		],
 		"description": "Declare SQL float double precision"
 	},
@@ -157,7 +157,7 @@
 	"Declare SQL char": {
 		"prefix": "declare SQL char",
 		"body": [
-			"dcl-s ${1:varname} char(${2:len});",
+			"dcl-s ${1:varname}   char(${2:len});",
 		],
 		"description": "Declare SQL char"
 	},
@@ -165,7 +165,7 @@
 	"Declare SQL char using ds": {
 		"prefix": "declare SQL char using ds",
 		"body": [
-			"dcl-ds ${1:dsname} len(${2:n}) end-ds;",
+			"dcl-ds ${1:dsname}   len(${2:n}) end-ds;",
 		],
 		"description": "Declare SQL char using ds"
 	},
@@ -173,7 +173,7 @@
 	"Declare SQL varchar": {
 		"prefix": "declare SQL varchar",
 		"body": [
-			"dcl-s ${1:varname} varchar(${2:len});",
+			"dcl-s ${1:varname}   varchar(${2:len});",
 		],
 		"description": "Declare SQL varchar"
 	},
@@ -181,7 +181,7 @@
 	"Declare SQL date": {
 		"prefix": "declare SQL date",
 		"body": [
-			"dcl-s ${1:varname} date;",
+			"dcl-s ${1:varname}   date;",
 		],
 		"description": "Declare SQL date"
 	},
@@ -189,7 +189,7 @@
 	"Declare SQL time": {
 		"prefix": "declare SQL time",
 		"body": [
-			"dcl-s ${1:varname} time;",
+			"dcl-s ${1:varname}   time;",
 		],
 		"description": "Declare SQL time"
 	},
@@ -197,9 +197,97 @@
 	"Declare SQL timestamp": {
 		"prefix": "declare SQL timestamp",
 		"body": [
-			"dcl-s ${1:varname} timestamp(32);",
+			"dcl-s ${1:varname}   timestamp(32);",
 		],
 		"description": "Declare SQL timestamp"
+	},
+
+	"Declare SQL binary": {
+		"prefix": "declare SQL binary",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(binary:${2:len});",
+		],
+		"description": "Declare SQL binary"
+	},
+
+	"Declare SQL varbinary": {
+		"prefix": "declare SQL varbinary",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(varbinary:${2:len});",
+		],
+		"description": "Declare SQL varbinary"
+	},
+
+	"Declare SQL clob": {
+		"prefix": "declare SQL clob",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(clob:${2:len});",
+		],
+		"description": "Declare SQL clob"
+	},
+
+	"Declare SQL dbclob": {
+		"prefix": "declare SQL dbclob",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(dbclob:${2:len});",
+		],
+		"description": "Declare SQL dbclob"
+	},
+
+	"Declare SQL blob": {
+		"prefix": "declare SQL blob",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(blob:${2:len});",
+		],
+		"description": "Declare SQL blob"
+	},
+
+	"Declare SQL clob locator": {
+		"prefix": "declare SQL clob locator",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(clob_locator);",
+		],
+		"description": "Declare SQL clob locator"
+	},
+
+	"Declare SQL dbclob locator": {
+		"prefix": "declare SQL dbclob locator",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(dbclob_locator);",
+		],
+		"description": "Declare SQL dbclob locator"
+	},
+
+	"Declare SQL blob locator": {
+		"prefix": "declare SQL blob locator",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(blob_locator);",
+		],
+		"description": "Declare SQL blob locator"
+	},
+
+	"Declare SQL clob file": {
+		"prefix": "declare SQL clob file",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(clob_file);",
+		],
+		"description": "Declare SQL clob file"
+	},
+
+	"Declare SQL dbclob file": {
+		"prefix": "declare SQL dbclob file",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(dbclob_file);",
+		],
+		"description": "Declare SQL dbclob file"
+	},
+
+	"Declare SQL blob file": {
+		"prefix": "declare SQL blob file",
+		"body": [
+			"dcl-s ${1:varname}   sqltype(blob_file);",
+		],
+		"description": "Declare SQL blob file"
 	},
 
 	"For loop ascending": {
