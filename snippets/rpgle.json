@@ -98,6 +98,198 @@
 		"description": "Declare Indicators"
 	},
 
+	"Declare constant": {
+		"prefix": "declare constant",
+		"body": [
+			"dcl-c ${1:const} ${2:value};",
+		],
+		"description": "Declare constant"
+	},
+
+	"Declare zoned decimal": {
+		"prefix": "declare zoned decimal",
+		"body": [
+			"dcl-s ${1:varname} zoned(${2:len}:${3:dec});",
+		],
+		"description": "Declare zoned decimal"
+	},
+
+	"Declare packed decimal": {
+		"prefix": "declare packed decimal",
+		"body": [
+			"dcl-s ${1:varname} packed(${2:len}:${3:dec});",
+		],
+		"description": "Declare packed decimal"
+	},
+
+	"Declare binary decimal": {
+		"prefix": "declare binary decimal",
+		"body": [
+			"dcl-s ${1:varname} bindec(${2:len}:${3:dec});",
+		],
+		"description": "Declare binary decimal"
+	},
+
+	"Declare character": {
+		"prefix": "declare character",
+		"body": [
+			"dcl-s ${1:varname} char(${2:len});",
+		],
+		"description": "Declare character"
+	},
+
+	"Declare integer 3-digit": {
+		"prefix": "declare integer 3-digit",
+		"body": [
+			"dcl-s ${1:varname} int(3);",
+		],
+		"description": "Declare integer 3-digit"
+	},
+
+	"Declare integer 5-digit": {
+		"prefix": "declare integer 5-digit",
+		"body": [
+			"dcl-s ${1:varname} int(5);",
+		],
+		"description": "Declare integer 5-digit"
+	},
+
+	"Declare integer 10-digit": {
+		"prefix": "declare integer 10-digit",
+		"body": [
+			"dcl-s ${1:varname} int(10);",
+		],
+		"description": "Declare integer 10-digit"
+	},
+
+	"Declare integer 20-digit": {
+		"prefix": "declare integer 20-digit",
+		"body": [
+			"dcl-s ${1:varname} int(20);",
+		],
+		"description": "Declare integer 20-digit"
+	},
+
+	"Declare unsigned integer 3-digit": {
+		"prefix": "declare unsigned integer 3-digit",
+		"body": [
+			"dcl-s ${1:varname} uns(3);",
+		],
+		"description": "Declare unsigned integer 3-digit"
+	},
+
+	"Declare unsigned integer 5-digit": {
+		"prefix": "declare unsigned integer 5-digit",
+		"body": [
+			"dcl-s ${1:varname} uns(5);",
+		],
+		"description": "Declare unsigned integer 5-digit"
+	},
+
+	"Declare unsigned integer 10-digit": {
+		"prefix": "declare unsigned integer 10-digit",
+		"body": [
+			"dcl-s ${1:varname} uns(10);",
+		],
+		"description": "Declare unsigned integer 10-digit"
+	},
+
+	"Declare unsigned integer 20-digit": {
+		"prefix": "declare unsigned integer 20-digit",
+		"body": [
+			"dcl-s ${1:varname} uns(20);",
+		],
+		"description": "Declare unsigned integer 20-digit"
+	},
+
+	"Declare float 4-byte": {
+		"prefix": "declare float 4-byte",
+		"body": [
+			"dcl-s ${1:varname} float(4);",
+		],
+		"description": "Declare float 4-byte"
+	},
+
+	"Declare float 8-byte": {
+		"prefix": "declare float 8-byte",
+		"body": [
+			"dcl-s ${1:varname} float(8);",
+		],
+		"description": "Declare float 8-byte"
+	},
+
+	"Declare indicator": {
+		"prefix": "declare indicator",
+		"body": [
+			"dcl-s ${1:varname} ind;",
+		],
+		"description": "Declare indicator"
+	},
+
+	"Declare date": {
+		"prefix": "declare date",
+		"body": [
+			"dcl-s ${1:varname} date(${2:format});",
+		],
+		"description": "Declare date"
+	},
+
+	"Declare time": {
+		"prefix": "declare time",
+		"body": [
+			"dcl-s ${1:varname} time(${2:format});",
+		],
+		"description": "Declare time"
+	},
+
+	"Declare timestamp": {
+		"prefix": "declare timestamp",
+		"body": [
+			"dcl-s ${1:varname} timestamp(${2:fractional_seconds});",
+		],
+		"description": "Declare timestamp"
+	},
+
+	"Declare graph": {
+		"prefix": "declare graph",
+		"body": [
+			"dcl-s ${1:varname} graph(${2:len});",
+		],
+		"description": "Declare graph"
+	},
+
+	"Declare univeral char set": {
+		"prefix": "declare univeral char set",
+		"body": [
+			"dcl-s ${1:varname} ucs2(${2:len});",
+		],
+		"description": "Declare univeral char set"
+	},
+
+	"Declare varchar": {
+		"prefix": "declare varchar",
+		"body": [
+			"dcl-s ${1:varname} varchar(${2:len});",
+		],
+		"description": "Declare varchar"
+	},
+
+	"Declare vargraph": {
+		"prefix": "declare vargraph",
+		"body": [
+			"dcl-s ${1:varname} vargraph(${2:len});",
+		],
+		"description": "Declare vargraph"
+	},
+
+	"Declare pointer": {
+		"prefix": "declare pointer",
+		"body": [
+			"dcl-s ${1:varname} pointer;",
+		],
+		"description": "Declare pointer"
+	},
+
 	"Declare SQL smallint": {
 		"prefix": "declare SQL smallint",
 		"body": [
